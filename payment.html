@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment | MWALIMU ONLINE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <header include="navbar.html"></header>
+
+  <main class="min-h-screen flex items-center justify-center py-12 px-4">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+      <div class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-blue-600 mb-2">Purchase Access</h1>
+        <p class="text-gray-600">Pay via M-Pesa to access premium materials</p>
+      </div>
+
+      <div class="space-y-6">
+        <div class="border rounded-lg p-4">
+          <h3 class="font-semibold text-lg mb-2">Payment Details</h3>
+          <p class="text-gray-700 mb-1">Till Number: <span class="font-medium">0740452793</span></p>
+          <p class="text-gray-700 mb-1">Business Name: <span class="font-medium">MWALIMU ONLINE</span></p>
+          <p class="text-gray-700">Amount: <span class="font-medium">KES 500</span></p>
+        </div>
+
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <i class="fas fa-info-circle text-yellow-400"></i>
+            </div>
+            <div class="ml-3">
+              <p class="text-sm text-yellow-700">
+                After payment, enter your M-Pesa transaction code below to verify.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <form id="paymentForm" class="space-y-4">
+          <div>
+            <label for="transactionCode" class="block text-sm font-medium text-gray-700 mb-1">M-Pesa Transaction Code</label>
+            <input type="text" id="transactionCode" name="transactionCode" required
+                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                   placeholder="e.g. MPE1234ABC">
+          </div>
+
+          <div>
+            <label for="phoneNumber" class="block text-sm font-medium text-gray-700 mb-1">Your M-Pesa Number</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <span class="text-gray-400">+254</span>
+              </div>
+              <input type="tel" id="phoneNumber" name="phoneNumber" required
+                     class="pl-14 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                     placeholder="700123456" pattern="[0-9]{9}">
+            </div>
+          </div>
+
+          <button type="submit"
+                  class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+            Verify Payment
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Include navbar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector('header[include="navbar.html"]').outerHTML = data;
+      });
+
+    // Form submission
+    document.getElementById('paymentForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const form = e.target;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const phoneNumber = '+254' + document.getElementById('phoneNumber').value;
+      const amount = 500; // KES 500 for resources access
+      
+      try {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Processing...';
+        
+        // Initiate M-Pesa payment
+        const response = await fetch('http://mwalimuonlineapp:3000/api/initiate-payment', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            phone: phoneNumber,
+            amount,
+            reference: 'MWALIMU_RESOURCES'
+          })
+        });
+
+        const data = await response.json();
+        
+        if (data.success) {
+          // Show success message with transaction details
+          alert(`Payment initiated successfully!\n
+            Amount: KES ${data.amount}\n
+            Pochi la Biashara: ${data.businessNumber}\n
+            Transaction Code: ${data.transactionCode}`);
+          
+          // Redirect after payment
+          window.location.href = 'kcse-resources.html?payment=success';
+        } else {
+          alert('Payment initiation failed. Please try again.');
+        }
+      } catch (error) {
+        console.error('Payment error:', error);
+        alert('An error occurred during payment. Please try again.');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Pay Now';
+      }
+    });
+  </script>
+</body>
+</html>
