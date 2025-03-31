@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Tuition | MWALIMU ONLINE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <header include="navbar.html"></header>
+
+  <main class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-purple-800 to-blue-600 text-white py-20">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Online Tuition Program</h1>
+        <p class="text-xl max-w-2xl mx-auto">1-hour daily classes with expert teachers for KES 15,000/month</p>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="md:flex">
+            <div class="p-8">
+              <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Monthly Plan</div>
+              <h2 class="mt-2 text-3xl font-bold">KES 15,000</h2>
+              <p class="mt-2 text-gray-500">1-hour daily online classes</p>
+              <div class="mt-6">
+                <ul class="space-y-4">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span>Personalized attention</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span>KCSE-focused curriculum</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span>Interactive virtual classroom</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span>Recorded sessions for review</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="bg-gray-50 p-8 flex items-center">
+              <div>
+                <h3 class="text-lg font-medium text-gray-900">Register Now</h3>
+                <div class="mt-6">
+                  <form id="tuitionForm" class="space-y-4">
+                    <div>
+                      <label for="studentName" class="block text-sm font-medium text-gray-700">Student Name</label>
+                      <input type="text" id="studentName" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                      <label for="parentPhone" class="block text-sm font-medium text-gray-700">Parent's Phone</label>
+                      <div class="mt-1 relative rounded-md shadow-sm">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                          <span class="text-gray-500 sm:text-sm">+254</span>
+                        </div>
+                        <input type="tel" id="parentPhone" required class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-12 sm:text-sm border-gray-300 rounded-md py-2 px-3" placeholder="700123456" pattern="[0-9]{9}">
+                      </div>
+                    </div>
+                    <div>
+                      <label for="studentClass" class="block text-sm font-medium text-gray-700">Class/Form</label>
+                      <select id="studentClass" required class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                        <option value="">Select class</option>
+                        <option>Form 1</option>
+                        <option>Form 2</option>
+                        <option>Form 3</option>
+                        <option>Form 4</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label for="subjects" class="block text-sm font-medium text-gray-700">Subjects (Select up to 3)</label>
+                      <select id="subjects" multiple class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option>Mathematics</option>
+                        <option>English</option>
+                        <option>Kiswahili</option>
+                        <option>Physics</option>
+                        <option>Chemistry</option>
+                        <option>Biology</option>
+                        <option>History</option>
+                        <option>Geography</option>
+                        <option>CRE</option>
+                        <option>IRE</option>
+                        <option>Business Studies</option>
+                        <option>Computer Studies</option>
+                      </select>
+                    </div>
+                    <div>
+                      <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Register & Pay KES 15,000
+                      </button>
+                    </div>
+                    <p class="text-xs text-gray-500">
+                      You'll receive M-Pesa payment instructions after registration
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <div class="text-indigo-600 text-3xl mb-4">
+              <i class="fas fa-user-plus"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">1. Register</h3>
+            <p class="text-gray-600">Fill the registration form and make payment via M-Pesa</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <div class="text-indigo-600 text-3xl mb-4">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">2. Schedule</h3>
+            <p class="text-gray-600">We'll contact you to arrange your class schedule</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <div class="text-indigo-600 text-3xl mb-4">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">3. Learn</h3>
+            <p class="text-gray-600">Attend daily 1-hour online classes via Zoom</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <script>
+    // Include navbar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector('header[include="navbar.html"]').outerHTML = data;
+      });
+
+    // Form submission
+    document.getElementById('tuitionForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const formData = {
+        studentName: document.getElementById('studentName').value,
+        parentPhone: '+254' + document.getElementById('parentPhone').value,
+        studentClass: document.getElementById('studentClass').value,
+        subjects: Array.from(document.getElementById('subjects').selectedOptions)
+          .map(option => option.value)
+      };
+
+      if(formData.subjects.length > 3) {
+        alert('Please select maximum 3 subjects');
+        return;
+      }
+
+      try {
+        // Request camera access
+        const stream = await navigator.mediaDevices.getUserMedia({ 
+          video: true,
+          audio: true
+        });
+        
+        // Show preview
+        const video = document.createElement('video');
+        video.srcObject = stream;
+        video.autoplay = true;
+        video.style.width = '100%';
+        video.style.borderRadius = '8px';
+        
+        const previewDiv = document.createElement('div');
+        previewDiv.className = 'mt-6 p-4 bg-gray-50 rounded-lg';
+        previewDiv.innerHTML = '<h3 class="text-lg font-medium mb-2">Camera Preview</h3>';
+        previewDiv.appendChild(video);
+        
+        const form = document.getElementById('tuitionForm');
+        form.parentNode.insertBefore(previewDiv, form.nextSibling);
+        
+        // Send registration data to backend
+        const response = await fetch('http://mwalimuonlineapp:3000/api/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+        
+        if (result.success) {
+          // Show payment instructions
+          alert('Registration received! Please pay KES 15,000 to M-Pesa Till 0740452793 (MWALIMU ONLINE)');
+        } else {
+          alert(result.error || 'Registration failed');
+        }
+        
+      } catch (error) {
+        console.error('Camera access error:', error);
+        alert('Camera access is required for online classes. Please enable permissions.');
+      }
+    });
+
+    // Virtual classroom demo
+    function startClassroom() {
+      // This would be called after successful payment
+      const classroomDiv = document.createElement('div');
+      classroomDiv.id = 'virtualClassroom';
+      classroomDiv.className = 'mt-8 p-4 bg-gray-100 rounded-lg';
+      classroomDiv.innerHTML = `
+        <h3 class="text-xl font-bold mb-4">Virtual Classroom</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h4 class="font-medium mb-2">Teacher View</h4>
+            <video id="teacherVideo" autoplay playsinline class="w-full rounded-lg"></video>
+          </div>
+          <div>
+            <h4 class="font-medium mb-2">Your View</h4>
+            <video id="studentVideo" autoplay playsinline muted class="w-full rounded-lg"></video>
+          </div>
+        </div>
+        <div class="mt-4 flex space-x-4">
+          <button id="muteBtn" class="px-4 py-2 bg-blue-600 text-white rounded-lg">
+            <i class="fas fa-microphone"></i> Mute
+          </button>
+          <button id="videoBtn" class="px-4 py-2 bg-blue-600 text-white rounded-lg">
+            <i class="fas fa-video"></i> Stop Video
+          </button>
+        </div>
+      `;
+      
+      document.querySelector('main').appendChild(classroomDiv);
+      
+      // Initialize camera and microphone
+      navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+        .then(stream => {
+          document.getElementById('studentVideo').srcObject = stream;
+          // In real implementation, this would connect to teacher's stream
+        })
+        .catch(error => {
+          console.error('Classroom error:', error);
+          alert('Could not initialize classroom. Please check permissions.');
+        });
+    }
+  </script>
+</body>
+</html>
