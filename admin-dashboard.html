@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | MWALIMU ONLINE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <header include="navbar.html"></header>
+
+  <main class="min-h-screen">
+    <!-- Admin Header -->
+    <div class="bg-blue-800 text-white py-6">
+      <div class="container mx-auto px-4">
+        <h1 class="text-2xl font-bold">Admin Dashboard</h1>
+        <p class="text-blue-200">Manage MWALIMU ONLINE system</p>
+      </div>
+    </div>
+
+    <!-- Dashboard Content -->
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <!-- Stats Cards -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-lg font-medium text-gray-500 mb-2">Total Students</h3>
+          <p class="text-3xl font-bold">1,248</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-lg font-medium text-gray-500 mb-2">Active Classes</h3>
+          <p class="text-3xl font-bold">42</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-lg font-medium text-gray-500 mb-2">Revenue</h3>
+          <p class="text-3xl font-bold">KES 1,864,000</p>
+        </div>
+      </div>
+
+      <!-- Management Sections -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Recent Payments -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold mb-4">Recent Payments</h3>
+          <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Student</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2024-03-31</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">John Doe</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">KES 15,000</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2024-03-30</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">Jane Smith</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">KES 15,000</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2024-03-29</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">Michael Johnson</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">KES 15,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold mb-4">Quick Actions</h3>
+          <div class="space-y-4">
+            <a href="#" class="block p-4 border rounded-lg hover:bg-gray-50 transition">
+              <div class="flex items-center">
+                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                  <i class="fas fa-user-plus text-blue-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">Add New Teacher</h4>
+                  <p class="text-sm text-gray-500">Register a new teaching staff</p>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="block p-4 border rounded-lg hover:bg-gray-50 transition">
+              <div class="flex items-center">
+                <div class="bg-green-100 p-3 rounded-full mr-4">
+                  <i class="fas fa-book text-green-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">Upload Resources</h4>
+                  <p class="text-sm text-gray-500">Add new learning materials</p>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="block p-4 border rounded-lg hover:bg-gray-50 transition">
+              <div class="flex items-center">
+                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                  <i class="fas fa-chart-line text-purple-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">View Reports</h4>
+                  <p class="text-sm text-gray-500">Generate system analytics</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Include navbar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector('header[include="navbar.html"]').outerHTML = data;
+      });
+  </script>
+</body>
+</html>
