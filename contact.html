@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | MWALIMU ONLINE</title>
+  <meta name="description" content="Get in touch with MWALIMU ONLINE for inquiries, partnerships, or feedback about our educational resources.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .form-input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50">
+  <header include="navbar.html"></header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-20">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+        <p class="text-xl max-w-2xl mx-auto">We'd love to hear from you! Reach out for inquiries, partnerships, or feedback.</p>
+      </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Contact Card 1 -->
+          <div class="contact-card bg-white p-8 rounded-lg shadow-md text-center transition duration-300">
+            <div class="text-blue-600 text-4xl mb-4">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Email Us</h3>
+            <p class="text-gray-600 mb-4">For general inquiries and support</p>
+            <a href="mailto:info@mwalimuonline.com" class="text-blue-600 font-medium">info@mwalimuonline.com</a>
+          </div>
+
+          <!-- Contact Card 2 -->
+          <div class="contact-card bg-white p-8 rounded-lg shadow-md text-center transition duration-300">
+            <div class="text-blue-600 text-4xl mb-4">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Call Us</h3>
+            <p class="text-gray-600 mb-4">Available Monday-Friday, 8am-5pm EAT</p>
+              <a href="tel:+254740452793" class="text-blue-600 font-medium">+254 740 452793</a>
+          </div>
+
+          <!-- Contact Card 3 -->
+          <div class="contact-card bg-white p-8 rounded-lg shadow-md text-center transition duration-300">
+            <div class="text-blue-600 text-4xl mb-4">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Visit Us</h3>
+            <p class="text-gray-600 mb-4">Our headquarters in Nairobi, Kenya</p>
+            <p class="text-blue-600 font-medium">Westlands, Nairobi</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+          <h2 class="text-3xl font-bold mb-8 text-center">Send Us a Message</h2>
+          
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                <input type="text" id="name" class="form-input w-full p-3 border rounded-lg focus:outline-none" placeholder="Your name" required>
+              </div>
+              <div>
+                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                <input type="email" id="email" class="form-input w-full p-3 border rounded-lg focus:outline-none" placeholder="your@email.com" required>
+              </div>
+            </div>
+
+            <div>
+              <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+              <select id="subject" class="form-input w-full p-3 border rounded-lg focus:outline-none" required>
+                <option value="" disabled selected>Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="resources">Resource Request</option>
+                <option value="partnership">Partnership Opportunity</option>
+                <option value="feedback">Feedback</option>
+                <option value="technical">Technical Support</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+              <textarea id="message" rows="5" class="form-input w-full p-3 border rounded-lg focus:outline-none" placeholder="Type your message here..." required></textarea>
+            </div>
+
+            <div class="flex items-center">
+              <input type="checkbox" id="consent" class="mr-2" required>
+              <label for="consent" class="text-gray-700">I agree to MWALIMU ONLINE's <a href="#" class="text-blue-600 hover:underline">Privacy Policy</a></label>
+            </div>
+
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+              Send Message <i class="fas fa-paper-plane ml-2"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+        
+        <div class="max-w-3xl mx-auto space-y-4">
+          <!-- FAQ Item 1 -->
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button class="w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none flex justify-between items-center">
+              <span class="font-medium">How can I access premium resources?</span>
+              <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+            </button>
+            <div class="p-4 bg-gray-50 hidden">
+              <p class="text-gray-700">Currently, all our resources are available for free. We may introduce premium features in the future, but our core educational materials will always remain accessible to all users.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button class="w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none flex justify-between items-center">
+              <span class="font-medium">Can I contribute educational materials?</span>
+              <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+            </button>
+            <div class="p-4 bg-gray-50 hidden">
+              <p class="text-gray-700">Yes! We welcome contributions from qualified educators. Please contact us with details about the materials you'd like to contribute, along with your credentials.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button class="w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none flex justify-between items-center">
+              <span class="font-medium">How often are resources updated?</span>
+              <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+            </button>
+            <div class="p-4 bg-gray-50 hidden">
+              <p class="text-gray-700">We update our resources continuously as curricula change. Major updates typically occur at the beginning of academic terms, with minor updates throughout the year.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button class="w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none flex justify-between items-center">
+              <span class="font-medium">Do you offer resources in languages other than English?</span>
+              <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+            </button>
+            <div class="p-4 bg-gray-50 hidden">
+              <p class="text-gray-700">Currently, most resources are in English, but we have Kiswahili materials for the Kenyan curriculum. We're working to expand our multilingual offerings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">Still Have Questions?</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">Our support team is ready to help you with any inquiries</p>
+        <a href="#" class="inline-block bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition duration-300">
+          Contact Support
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">MWALIMU ONLINE</h3>
+          <p class="text-gray-400">Your partner in global education.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+            <li><a href="exams.html" class="text-gray-400 hover:text-white transition">Exam Resources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="cbc.html" class="text-gray-400 hover:text-white transition">CBC</a></li>
+            <li><a href="8-4-4.html" class="text-gray-400 hover:text-white transition">8-4-4</a></li>
+            <li><a href="international.html" class="text-gray-400 hover:text-white transition">International</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Connect</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2024 MWALIMU ONLINE. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Include navbar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector('header[include="navbar.html"]').outerHTML = data;
+      });
+
+    // FAQ accordion functionality
+    document.querySelectorAll('.border button').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        
+        content.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+      });
+    });
+
+    // Form submission
+    document.querySelector('form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for your message! We will get back to you soon.');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
