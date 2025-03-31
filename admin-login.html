@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login | MWALIMU ONLINE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <header include="navbar.html"></header>
+
+  <main class="min-h-screen flex items-center justify-center py-12 px-4">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+      <div class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-blue-600 mb-2">Admin Portal</h1>
+        <p class="text-gray-600">Access the management dashboard</p>
+      </div>
+
+      <form id="adminLoginForm" class="space-y-6">
+        <div>
+          <label for="adminEmail" class="block text-sm font-medium text-gray-700 mb-1">Admin Email</label>
+          <input type="email" id="adminEmail" required
+                 class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                 placeholder="admin@mwalimuonline.com">
+        </div>
+
+        <div>
+          <label for="adminPassword" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+          <input type="password" id="adminPassword" required
+                 class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                 placeholder="••••••••">
+        </div>
+
+        <div>
+          <button type="submit"
+                  class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    // Include navbar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector('header[include="navbar.html"]').outerHTML = data;
+      });
+
+    // Form submission
+    document.getElementById('adminLoginForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const form = e.target;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const email = document.getElementById('adminEmail').value;
+      const password = document.getElementById('adminPassword').value;
+      
+      try {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Authenticating...';
+        
+        // Verify admin credentials with backend
+        const response = await fetch('http://mwalimuonlineapp:3000/api/admin-login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password })
+        });
+
+        const data = await response.json();
+        
+        if (data.success) {
+          // Store token (in production, use secure HttpOnly cookie)
+          localStorage.setItem('adminToken', data.token);
+          
+          // Redirect to admin dashboard
+          window.location.href = 'admin-dashboard.html';
+        } else {
+          alert(data.error || 'Login failed');
+        }
+      } catch (error) {
+        console.error('Admin login error:', error);
+        alert('Authentication failed. Please try again.');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Login';
+      }
+    });
+  </script>
+</body>
+</html>
