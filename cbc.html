@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBC Curriculum Resources | MWALIMU ONLINE</title>
+  <meta name="description" content="Access comprehensive CBC curriculum notes, lesson plans, and learning materials for all grades and subjects.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .subject-card:hover .subject-icon {
+      transform: scale(1.1);
+    }
+    .grade-tab.active {
+      background-color: #3b82f6;
+      color: white;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50">
+  <header include="navbar.html"></header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-blue-600 text-white py-20">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">CBC Curriculum Resources</h1>
+        <p class="text-xl max-w-2xl mx-auto">Competency-based learning materials for all grades and subjects</p>
+      </div>
+    </section>
+
+    <!-- Grade Navigation -->
+    <section class="py-8 bg-white shadow-sm">
+      <div class="container mx-auto px-4">
+        <div class="flex overflow-x-auto pb-2 space-x-2">
+          <button class="grade-tab active px-6 py-2 rounded-full whitespace-nowrap" data-grade="all">All Grades</button>
+          <button class="grade-tab px-6 py-2 rounded-full whitespace-nowrap" data-grade="grade1">Grade 1</button>
+          <button class="grade-tab px-6 py-2 rounded-full whitespace-nowrap" data-grade="grade2">Grade 2</button>
+          <button class="grade-tab px-6 py-2 rounded-full whitespace-nowrap" data-grade="grade3">Grade 3</button>
+          <button class="grade-tab px-6 py-2 rounded-full whitespace-nowrap" data-grade="grade4">Grade 4</button>
+          <button class="grade-tab px-6 py-2 rounded-full whitespace-nowrap" data-grade="grade5">Grade 5</button>
+          <button class="grade-tab px-6 py-2 rounded-full whitespace-nowrap" data-grade="grade6">Grade 6</button>
+          <button class="grade-tab px-6 py-2 rounded-full whitespace-nowrap" data-grade="grade7">Grade 7</button>
+          <button class="grade-tab px-6 py-2 rounded-full whitespace-nowrap" data-grade="grade8">Grade 8</button>
+          <button class="grade-tab px-6 py-2 rounded-full whitespace-nowrap" data-grade="grade9">Grade 9</button>
+          <button class="grade-tab px-6 py-2 rounded-full whitespace-nowrap bg-purple-100 text-purple-800" data-grade="grade10">Grade 10</button>
+          <button class="grade-tab px-6 py-2 rounded-full whitespace-nowrap bg-purple-100 text-purple-800" data-grade="grade11">Grade 11</button>
+          <button class="grade-tab px-6 py-2 rounded-full whitespace-nowrap bg-purple-100 text-purple-800" data-grade="grade12">Grade 12</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold text-center mb-4">Subjects</h2>
+          <div class="flex justify-center">
+            <div class="relative max-w-md w-full">
+              <input type="text" placeholder="Search subjects..." class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+          <!-- Core Subjects -->
+          <div class="subject-card bg-white p-6 rounded-lg shadow-md text-center transition duration-300 hover:shadow-lg">
+            <div class="subject-icon text-blue-600 text-4xl mb-4 transition duration-300">
+              <i class="fas fa-language"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">English</h3>
+            <p class="text-sm text-gray-600 mb-4">Grade 7-9 resources</p>
+            <a href="#" class="text-blue-600 text-sm font-medium inline-flex items-center">
+              View Materials <i class="fas fa-chevron-right ml-1"></i>
+            </a>
+          </div>
+
+          <div class="subject-card bg-white p-6 rounded-lg shadow-md text-center transition duration-300 hover:shadow-lg">
+            <div class="subject-icon text-blue-600 text-4xl mb-4 transition duration-300">
+              <i class="fas fa-book"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Kiswahili</h3>
+            <p class="text-sm text-gray-600 mb-4">Grade 7-9 resources</p>
+            <a href="#" class="text-blue-600 text-sm font-medium inline-flex items-center">
+              View Materials <i class="fas fa-chevron-right ml-1"></i>
+            </a>
+          </div>
+
+          <div class="subject-card bg-white p-6 rounded-lg shadow-md text-center transition duration-300 hover:shadow-lg">
+            <div class="subject-icon text-blue-600 text-4xl mb-4 transition duration-300">
+              <i class="fas fa-square-root-alt"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Mathematics</h3>
+            <p class="text-sm text-gray-600 mb-4">Grade 7-9 resources</p>
+            <a href="#" class="text-blue-600 text-sm font-medium inline-flex items-center">
+              View Materials <i class="fas fa-chevron-right ml-1"></i>
+            </a>
+          </div>
+
+          <div class="subject-card bg-white p-6 rounded-lg shadow-md text-center transition duration-300 hover:shadow-lg">
+            <div class="subject-icon text-blue-600 text-4xl mb-4 transition duration-300">
+              <i class="fas fa-globe-africa"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Social Studies</h3>
+            <p class="text-sm text-gray-600 mb-4">Grade 7-9 resources</p>
+            <a href="#" class="text-blue-600 text-sm font-medium inline-flex items-center">
+              View Materials <i class="fas fa-chevron-right ml-1"></i>
+            </a>
+          </div>
+
+          <!-- Technical Subjects -->
+          <div class="subject-card bg-white p-6 rounded-lg shadow-md text-center transition duration-300 hover:shadow-lg">
+            <div class="subject-icon text-blue-600 text-4xl mb-4 transition duration-300">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Pretechnical Studies</h3>
+            <p class="text-sm text-gray-600 mb-4">Grade 7-9 resources</p>
+            <a href="#" class="text-blue-600 text-sm font-medium inline-flex items-center">
+              View Materials <i class="fas fa-chevron-right ml-1"></i>
+            </a>
+          </div>
+
+          <!-- Religious Education -->
+          <div class="subject-card bg-white p-6 rounded-lg shadow-md text-center transition duration-300 hover:shadow-lg">
+            <div class="subject-icon text-blue-600 text-4xl mb-4 transition duration-300">
+              <i class="fas fa-hands-praying"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">IRE/CRE</h3>
+            <p class="text-sm text-gray-600 mb-4">Grade 7-9 resources</p>
+            <a href="#" class="text-blue-600 text-sm font-medium inline-flex items-center">
+              View Materials <i class="fas fa-chevron-right ml-1"></i>
+            </a>
+          </div>
+
+          <!-- Science & Agriculture -->
+          <div class="subject-card bg-white p-6 rounded-lg shadow-md text-center transition duration-300 hover:shadow-lg">
+            <div class="subject-icon text-blue-600 text-4xl mb-4 transition duration-300">
+              <i class="fas fa-flask"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Integrated Science</h3>
+            <p class="text-sm text-gray-600 mb-4">Grade 7-9 resources</p>
+            <a href="#" class="text-blue-600 text-sm font-medium inline-flex items-center">
+              View Materials <i class="fas fa-chevron-right ml-1"></i>
+            </a>
+          </div>
+
+          <div class="subject-card bg-white p-6 rounded-lg shadow-md text-center transition duration-300 hover:shadow-lg">
+            <div class="subject-icon text-blue-600 text-4xl mb-4 transition duration-300">
+              <i class="fas fa-tractor"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Agriculture & Nutrition</h3>
+            <p class="text-sm text-gray-600 mb-4">Grade 7-9 resources</p>
+            <a href="#" class="text-blue-600 text-sm font-medium inline-flex items-center">
+              View Materials <i class="fas fa-chevron-right ml-1"></i>
+            </a>
+          </div>
+
+          <!-- Arts & Sports -->
+          <div class="subject-card bg-white p-6 rounded-lg shadow-md text-center transition duration-300 hover:shadow-lg">
+            <div class="subject-icon text-blue-600 text-4xl mb-4 transition duration-300">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Creative Arts & Sports</h3>
+            <p class="text-sm text-gray-600 mb-4">Grade 7-9 resources</p>
+            <a href="#" class="text-blue-600 text-sm font-medium inline-flex items-center">
+              View Materials <i class="fas fa-chevron-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Senior Secondary Section -->
+        <div class="mt-16">
+          <h3 class="text-2xl font-bold mb-8 text-center border-b-2 border-purple-200 pb-2">Senior Secondary (Grade 10-12)</h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            <!-- STEM Pathway -->
+            <div class="subject-card bg-white p-6 rounded-lg shadow-md text-center transition duration-300 hover:shadow-lg border-l-4 border-purple-500">
+              <div class="subject-icon text-purple-600 text-4xl mb-4">
+                <i class="fas fa-atom"></i>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">STEM Pathway</h3>
+              <p class="text-sm text-gray-600 mb-4">Grade 10-12 resources</p>
+              <a href="#" class="text-purple-600 text-sm font-medium inline-flex items-center">
+                View Materials <i class="fas fa-chevron-right ml-1"></i>
+              </a>
+            </div>
+
+            <!-- Arts Pathway -->
+            <div class="subject-card bg-white p-6 rounded-lg shadow-md text-center transition duration-300 hover:shadow-lg border-l-4 border-purple-500">
+              <div class="subject-icon text-purple-600 text-4xl mb-4">
+                <i class="fas fa-palette"></i>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">Arts Pathway</h3>
+              <p class="text-sm text-gray-600 mb-4">Grade 10-12 resources</p>
+              <a href="#" class="text-purple-600 text-sm font-medium inline-flex items-center">
+                View Materials <i class="fas fa-chevron-right ml-1"></i>
+              </a>
+            </div>
+
+            <!-- Business Pathway -->
+            <div class="subject-card bg-white p-6 rounded-lg shadow-md text-center transition duration-300 hover:shadow-lg border-l-4 border-purple-500">
+              <div class="subject-icon text-purple-600 text-4xl mb-4">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">Business Pathway</h3>
+              <p class="text-sm text-gray-600 mb-4">Grade 10-12 resources</p>
+              <a href="#" class="text-purple-600 text-sm font-medium inline-flex items-center">
+                View Materials <i class="fas fa-chevron-right ml-1"></i>
+              </a>
+            </div>
+
+            <!-- Sports Pathway -->
+            <div class="subject-card bg-white p-6 rounded-lg shadow-md text-center transition duration-300 hover:shadow-lg border-l-4 border-purple-500">
+              <div class="subject-icon text-purple-600 text-4xl mb-4">
+                <i class="fas fa-running"></i>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">Sports Pathway</h3>
+              <p class="text-sm text-gray-600 mb-4">Grade 10-12 resources</p>
+              <a href="#" class="text-purple-600 text-sm font-medium inline-flex items-center">
+                View Materials <i class="fas fa-chevron-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Featured Resources</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Resource Card 1 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="h-48 overflow-hidden">
+              <img src="https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg" alt="Mathematics Activities" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-2">
+                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Grade 3</span>
+                <span class="ml-2 text-gray-500 text-sm">Mathematics</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Mathematics Activities Book 3</h3>
+              <p class="text-gray-600 mb-4">Comprehensive activities aligned with CBC curriculum</p>
+              <div class="flex justify-between items-center">
+                <a href="#" class="text-blue-600 font-medium">Download PDF</a>
+                <span class="text-gray-500 text-sm">2.4 MB</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resource Card 2 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="h-48 overflow-hidden">
+              <img src="https://images.pexels.com/photos/5904932/pexels-photo-5904932.jpeg" alt="English Guide" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-2">
+                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Grade 5</span>
+                <span class="ml-2 text-gray-500 text-sm">English</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">English Literacy Guide</h3>
+              <p class="text-gray-600 mb-4">Developing reading and writing competencies</p>
+              <div class="flex justify-between items-center">
+                <a href="#" class="text-blue-600 font-medium">Download PDF</a>
+                <span class="text-gray-500 text-sm">3.1 MB</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resource Card 3 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="h-48 overflow-hidden">
+              <img src="https://images.pexels.com/photos/4144228/pexels-photo-4144228.jpeg" alt="Science Experiments" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-2">
+                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Grade 7</span>
+                <span class="ml-2 text-gray-500 text-sm">Science</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Science Practical Guide</h3>
+              <p class="text-gray-600 mb-4">Hands-on experiments and activities</p>
+              <div class="flex justify-between items-center">
+                <a href="#" class="text-blue-600 font-medium">Download PDF</a>
+                <span class="text-gray-500 text-sm">4.7 MB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition duration-300">
+            View All Resources <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">MWALIMU ONLINE</h3>
+          <p class="text-gray-400">Your trusted source for CBC curriculum resources.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="8-4-4.html" class="text-gray-400 hover:text-white transition">8-4-4 Resources</a></li>
+            <li><a href="international.html" class="text-gray-400 hover:text-white transition">International</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">CBC Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Lower Primary</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Upper Primary</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Junior Secondary</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2">
+            <li class="text-gray-400"><i class="fas fa-envelope mr-2"></i> info@mwalimuonline.com</li>
+            <li class="text-gray-400"><i class="fas fa-phone mr-2"></i> +254 740 452793</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2024 MWALIMU ONLINE. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Include navbar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector('header[include="navbar.html"]').outerHTML = data;
+      });
+
+    // Grade tabs functionality
+    const gradeTabs = document.querySelectorAll('.grade-tab');
+    gradeTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        gradeTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        // Filter functionality would go here
+      });
+    });
+  </script>
+</body>
+</html>
