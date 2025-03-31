@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KCSE Resources | MWALIMU ONLINE</title>
+  <meta name="description" content="Complete collection of KCSE past papers (2010-2024) with marking schemes for all subjects">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .subject-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    .year-badge {
+      transition: all 0.3s ease;
+    }
+    .year-badge:hover {
+      background-color: #3b82f6;
+      color: white;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50">
+  <header include="navbar.html"></header>
+
+  <main>
+    <!-- Payment Check Section -->
+    <section class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-20" id="paymentCheck">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">KCSE Resources</h1>
+        <p class="text-xl max-w-2xl mx-auto mb-8">Past papers and marking schemes (2010-2024) for all subjects</p>
+        <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto">
+          <h3 class="text-2xl font-bold mb-4">Premium Content Access</h3>
+          <p class="mb-6">Unlock all resources with a one-time payment of KES 500 via M-Pesa</p>
+          <a href="payment.html" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10">
+            <i class="fas fa-lock-open mr-2"></i> Pay Now
+          </a>
+          <p class="mt-4 text-sm opacity-80">Till Number: 0740452793 (MWALIMU ONLINE)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources Section (hidden by default) -->
+    <section class="hidden" id="resourcesContent">
+
+    <!-- Subjects Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+          <h2 class="text-3xl font-bold">Browse by Subject</h2>
+          <div class="mt-4 md:mt-0">
+            <select class="p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option>Jump to Year: 2010-2014</option>
+              <option>Jump to Year: 2015-2019</option>
+              <option>Jump to Year: 2020-2022</option>
+              <option>Jump to Year: 2023-2024</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Languages -->
+          <div class="subject-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+            <div class="text-blue-600 text-3xl mb-4">
+              <i class="fas fa-language"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Languages</h3>
+            <div class="space-y-2 mb-4">
+              <a href="#" class="block text-blue-600 hover:underline">English</a>
+              <a href="#" class="block text-blue-600 hover:underline">Kiswahili</a>
+              <a href="#" class="block text-blue-600 hover:underline">Arabic</a>
+            </div>
+            <a href="#" class="text-blue-600 font-medium flex items-center">
+              View All <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+          </div>
+
+          <!-- Mathematics -->
+          <div class="subject-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+            <div class="text-blue-600 text-3xl mb-4">
+              <i class="fas fa-square-root-alt"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Mathematics</h3>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="year-badge bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs">2024</span>
+              <span class="year-badge bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs">2023</span>
+              <span class="year-badge bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs">2022</span>
+            </div>
+            <a href="#" class="text-blue-600 font-medium flex items-center">
+              View All Papers <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+          </div>
+
+          <!-- Sciences -->
+          <div class="subject-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+            <div class="text-blue-600 text-3xl mb-4">
+              <i class="fas fa-flask"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Sciences</h3>
+            <div class="space-y-2 mb-4">
+              <a href="#" class="block text-blue-600 hover:underline">Physics</a>
+              <a href="#" class="block text-blue-600 hover:underline">Chemistry</a>
+              <a href="#" class="block text-blue-600 hover:underline">Biology</a>
+            </div>
+            <a href="#" class="text-blue-600 font-medium flex items-center">
+              View All <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+          </div>
+
+          <!-- Humanities -->
+          <div class="subject-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+            <div class="text-blue-600 text-3xl mb-4">
+              <i class="fas fa-landmark"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Humanities</h3>
+            <div class="space-y-2 mb-4">
+              <a href="#" class="block text-blue-600 hover:underline">History & Government</a>
+              <a href="#" class="block text-blue-600 hover:underline">Geography</a>
+              <a href="#" class="block text-blue-600 hover:underline">CRE</a>
+              <a href="#" class="block text-blue-600 hover:underline">IRE</a>
+            </div>
+            <a href="#" class="text-blue-600 font-medium flex items-center">
+              View All <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+          </div>
+
+          <!-- Business & Tech -->
+          <div class="subject-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+            <div class="text-blue-600 text-3xl mb-4">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Business & Tech</h3>
+            <div class="space-y-2 mb-4">
+              <a href="#" class="block text-blue-600 hover:underline">Business Studies</a>
+              <a href="#" class="block text-blue-600 hover:underline">Computer Studies</a>
+            </div>
+            <a href="#" class="text-blue-600 font-medium flex items-center">
+              View All <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Yearly Papers Section -->
+    <section class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Browse by Year</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- 2020-2024 -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-4 border-b pb-2">2020-2024</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-blue-600 hover:underline">2024 Papers</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">2023 Papers</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">2022 Papers</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">2021 Papers</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">2020 Papers</a></li>
+            </ul>
+          </div>
+
+          <!-- 2015-2019 -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-4 border-b pb-2">2015-2019</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-blue-600 hover:underline">2019 Papers</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">2018 Papers</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">2017 Papers</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">2016 Papers</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">2015 Papers</a></li>
+            </ul>
+          </div>
+
+          <!-- 2010-2014 -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-4 border-b pb-2">2010-2014</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-blue-600 hover:underline">2014 Papers</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">2013 Papers</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">2012 Papers</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">2011 Papers</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">2010 Papers</a></li>
+            </ul>
+          </div>
+
+          <!-- Marking Schemes -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-4 border-b pb-2">Marking Schemes</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-blue-600 hover:underline">2020-2024</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">2015-2019</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">2010-2014</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Subject Guides</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">Need More Exam Resources?</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">Explore our complete collection of past papers and revision materials</p>
+        <a href="exams.html" class="inline-block bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition duration-300">
+          Browse All Exams
+        </a>
+      </div>
+    </section>
+    </section>
+
+    <script>
+      // Check for payment verification
+      document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        if(urlParams.has('payment') && urlParams.get('payment') === 'success') {
+          document.getElementById('paymentCheck').classList.add('hidden');
+          document.getElementById('resourcesContent').classList.remove('hidden');
+          // Store payment verification in localStorage
+          localStorage.setItem('paidAccess', 'true');
+        } else if(localStorage.getItem('paidAccess') === 'true') {
+          document.getElementById('paymentCheck').classList.add('hidden');
+          document.getElementById('resourcesContent').classList.remove('hidden');
+        }
+      });
+    </script>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">MWALIMU ONLINE</h3>
+          <p class="text-gray-400">Your complete KCSE preparation partner.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="exams.html" class="text-gray-400 hover:text-white transition">All Exams</a></li>
+            <li><a href="online-learning.html" class="text-gray-400 hover:text-white transition">Online Classes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Subjects</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Mathematics</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Sciences</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Languages</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2">
+            <li class="text-gray-400"><i class="fas fa-envelope mr-2"></i> kcse@mwalimuonline.com</li>
+            <li class="text-gray-400"><i class="fas fa-phone mr-2"></i> +254 740 452793</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2024 MWALIMU ONLINE. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Include navbar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector('header[include="navbar.html"]').outerHTML = data;
+      });
+  </script>
+</body>
+</html>
