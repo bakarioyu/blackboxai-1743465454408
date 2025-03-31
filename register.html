@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | MWALIMU ONLINE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .password-strength {
+      height: 4px;
+      transition: all 300ms ease;
+    }
+    .password-weak { background-color: #ef4444; width: 25%; }
+    .password-medium { background-color: #f59e0b; width: 50%; }
+    .password-strong { background-color: #10b981; width: 75%; }
+    .password-very-strong { background-color: #3b82f6; width: 100%; }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <header include="navbar.html"></header>
+
+  <main class="min-h-screen flex items-center justify-center py-12 px-4">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+      <div class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-blue-600 mb-2">Create Account</h1>
+        <p class="text-gray-600">Join MWALIMU ONLINE to access all resources</p>
+      </div>
+
+      <form id="registerForm" class="space-y-6">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+          <input type="text" id="name" name="name" required
+                 class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                 placeholder="John Doe">
+        </div>
+
+        <div>
+          <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <span class="text-gray-400">+254</span>
+            </div>
+            <input type="tel" id="phone" name="phone" required
+                   class="pl-14 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                   placeholder="700123456" pattern="[0-9]{9}">
+          </div>
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email (Optional)</label>
+          <input type="email" id="email" name="email"
+                 class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                 placeholder="your@email.com">
+        </div>
+
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+          <div class="relative">
+            <input type="password" id="password" name="password" required
+                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                   placeholder="••••••••" minlength="8">
+            <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+              <i class="fas fa-eye-slash text-gray-400 cursor-pointer" id="togglePassword"></i>
+            </div>
+          </div>
+          <div class="mt-2 flex space-x-1">
+            <div class="password-strength password-weak" id="password-strength"></div>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">
+            Password must contain at least 8 characters with uppercase, lowercase, number and special character
+          </p>
+        </div>
+
+        <div>
+          <label for="confirmPassword" class="block text-sm font-medium text-gray-700 mb-1">Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required
+                 class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                 placeholder="••••••••">
+        </div>
+
+        <div class="flex items-center">
+          <input id="terms" name="terms" type="checkbox" required
+                 class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+          <label for="terms" class="ml-2 block text-sm text-gray-700">
+            I agree to the <a href="#" class="text-blue-600 hover:underline">Terms of Service</a> and <a href="#" class="text-blue-600 hover:underline">Privacy Policy</a>
+          </label>
+        </div>
+
+        <div>
+          <button type="submit"
+                  class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+            Create Account
+          </button>
+        </div>
+      </form>
+
+      <div class="mt-6 text-center">
+        <p class="text-sm text-gray-600">
+          Already have an account? <a href="login.html" class="font-medium text-blue-600 hover:text-blue-500">Sign in</a>
+        </p>
+      </div>
+      
+      <!-- Error display -->
+      <div id="errorDisplay" class="mt-4 hidden">
+        <div class="bg-red-50 border-l-4 border-red-500 p-4">
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <i class="fas fa-exclamation-circle text-red-500"></i>
+            </div>
+            <div class="ml-3">
+              <p id="errorMessage" class="text-sm text-red-700"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Error display function
+    function clearErrors() {
+      const errorDisplay = document.getElementById('errorDisplay');
+      errorDisplay.classList.add('hidden');
+    }
+
+    function showError(message) {
+      clearErrors(); // Clear any existing errors first
+      const errorDisplay = document.getElementById('errorDisplay');
+      const errorMessage = document.getElementById('errorMessage');
+      errorMessage.textContent = message;
+      errorDisplay.classList.remove('hidden');
+      // Auto-hide after 5 seconds
+      setTimeout(clearErrors, 5000);
+    }
+
+    // Include navbar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector('header[include="navbar.html"]').outerHTML = data;
+      });
+
+    // Password visibility toggle
+    document.getElementById('togglePassword').addEventListener('click', function() {
+      const password = document.getElementById('password');
+      const icon = this;
+      if (password.type === 'password') {
+        password.type = 'text';
+        icon.classList.replace('fa-eye-slash', 'fa-eye');
+      } else {
+        password.type = 'password';
+        icon.classList.replace('fa-eye', 'fa-eye-slash');
+      }
+    });
+
+    // Password strength meter
+    document.getElementById('password').addEventListener('input', function() {
+      const strengthBar = document.getElementById('password-strength');
+      const password = this.value;
+      
+      // Reset classes
+      strengthBar.className = 'password-strength';
+      
+      if (password.length === 0) return;
+      
+      // Calculate strength
+      let strength = 0;
+      if (password.length >= 8) strength++;
+      if (/[A-Z]/.test(password)) strength++;
+      if (/[0-9]/.test(password)) strength++;
+      if (/[^A-Za-z0-9]/.test(password)) strength++;
+      
+      // Update strength meter
+      if (strength < 2) {
+        strengthBar.classList.add('password-weak');
+      } else if (strength === 2) {
+        strengthBar.classList.add('password-medium');
+      } else if (strength === 3) {
+        strengthBar.classList.add('password-strong');
+      } else {
+        strengthBar.classList.add('password-very-strong');
+      }
+    });
+
+    // Form submission - Step 1: Send OTP
+    document.getElementById('registerForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const form = e.target;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+      
+      // Clear previous errors
+      document.getElementById('errorDisplay').classList.add('hidden');
+      
+      // Validate password match
+      if (password !== confirmPassword) {
+        showError('Passwords do not match!');
+        return;
+      }
+      
+      // Validate password strength
+      if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})/.test(password)) {
+        showError('Password must contain at least 8 characters including uppercase, lowercase, number and special character');
+        return;
+      }
+      
+      const formData = {
+        name: document.getElementById('name').value,
+        phone: '+254' + document.getElementById('phone').value,
+        email: document.getElementById('email').value || null,
+        password: password
+      };
+      
+      try {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending OTP...';
+        
+        // Send registration data and request OTP
+        const response = await fetch('http://localhost:3000/api/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+        });
+
+        const data = await response.json();
+        
+        if (data.success) {
+          // Show OTP verification modal
+          const otp = prompt('Enter the 6-digit verification code sent to your phone:');
+          if (otp) {
+            submitBtn.innerHTML = 'Verifying...';
+            
+            // Verify OTP and complete registration
+            const verifyResponse = await fetch('http://localhost:3000/api/verify-registration', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                phone: formData.phone,
+                otp,
+                name: formData.name,
+                password: formData.password
+              })
+            });
+
+            const verifyData = await verifyResponse.json();
+            if (verifyData.success) {
+              showError('Registration successful! Redirecting to login...');
+              setTimeout(() => {
+                window.location.href = 'login.html?registered=true';
+              }, 2000);
+            } else {
+              showError(verifyData.error || 'Verification failed. Please try again.');
+            }
+          }
+        } else {
+          showError(data.error || 'Failed to send verification code. Please try again.');
+        }
+      } catch (error) {
+        console.error('Registration error:', error);
+        showError('An error occurred. Please try again.');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Create Account';
+      }
+    });
+  </script>
+</body>
+</html>
