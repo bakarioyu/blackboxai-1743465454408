@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | MWALIMU ONLINE</title>
+  <meta name="description" content="The page you're looking for doesn't exist or has been moved.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .error-illustration {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50">
+  <header include="navbar.html"></header>
+
+  <main class="min-h-screen flex items-center justify-center">
+    <div class="container mx-auto px-4 text-center">
+      <div class="max-w-md mx-auto">
+        <!-- Illustration -->
+        <div class="error-illustration mb-8">
+          <svg class="w-64 h-64 mx-auto text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+
+        <!-- Error Message -->
+        <h1 class="text-5xl font-bold text-gray-800 mb-4">404</h1>
+        <h2 class="text-2xl font-semibold text-gray-700 mb-6">Page Not Found</h2>
+        <p class="text-gray-600 mb-8">
+          The page you're looking for doesn't exist or has been moved. 
+          Please check the URL or navigate back to our homepage.
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="index.html" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300">
+            <i class="fas fa-home mr-2"></i> Go to Homepage
+          </a>
+          <a href="contact.html" class="bg-white border border-gray-300 hover:bg-gray-100 text-gray-700 font-medium py-3 px-6 rounded-lg transition duration-300">
+            <i class="fas fa-envelope mr-2"></i> Contact Support
+          </a>
+        </div>
+
+        <!-- Search Form -->
+        <div class="mt-12">
+          <p class="text-gray-600 mb-4">Or search for what you need:</p>
+          <form class="flex max-w-md mx-auto">
+            <input type="text" placeholder="Search resources..." class="flex-grow p-3 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-r-lg">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2024 MWALIMU ONLINE. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Include navbar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector('header[include="navbar.html"]').outerHTML = data;
+      });
+  </script>
+</body>
+</html>
