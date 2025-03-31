@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MWALIMU ONLINE - Global Learning Hub</title>
+  <meta name="description" content="Access quality educational resources for CBC, 8-4-4, and international curricula. Download notes and exam papers for all levels.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .hero-bg {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50">
+  <header include="navbar.html"></header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-32 px-4">
+      <div class="container mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Empowering Global Learners</h1>
+        <p class="text-xl md:text-2xl mb-8">Quality educational resources for CBC, 8-4-4, and international curricula</p>
+        <a href="#resources" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full inline-block transition duration-300">
+          Explore Resources <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800">Why Choose MWALIMU ONLINE?</h2>
+          <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Comprehensive, up-to-date learning materials curated by education experts</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-50 p-6 rounded-lg text-center">
+            <div class="text-blue-600 text-4xl mb-4">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Comprehensive Notes</h3>
+            <p class="text-gray-600">Detailed curriculum-aligned notes for all subjects and levels</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg text-center">
+            <div class="text-blue-600 text-4xl mb-4">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Exam Resources</h3>
+            <p class="text-gray-600">Past papers and practice exams with marking schemes</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg text-center">
+            <div class="text-blue-600 text-4xl mb-4">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Global Curriculum</h3>
+            <p class="text-gray-600">Resources for international education systems</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800">Learning Resources</h2>
+          <p class="text-gray-600 mt-4">Access materials for your specific curriculum</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-md card-hover transition duration-300">
+            <div class="h-48 overflow-hidden rounded-t-lg mb-4">
+              <img src="https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg" alt="CBC Curriculum" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-semibold mb-2">CBC Curriculum</h3>
+            <p class="text-gray-600 mb-4">Competency-based education resources for all grades</p>
+            <a href="cbc.html" class="text-blue-600 font-medium inline-flex items-center">
+              View Resources <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md card-hover transition duration-300">
+            <div class="h-48 overflow-hidden rounded-t-lg mb-4">
+              <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg" alt="8-4-4 Curriculum" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-semibold mb-2">8-4-4 System</h3>
+            <p class="text-gray-600 mb-4">Comprehensive notes for primary and secondary education</p>
+            <a href="8-4-4.html" class="text-blue-600 font-medium inline-flex items-center">
+              View Resources <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md card-hover transition duration-300">
+            <div class="h-48 overflow-hidden rounded-t-lg mb-4">
+              <img src="https://images.pexels.com/photos/4144228/pexels-photo-4144228.jpeg" alt="International Curriculum" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-xl font-semibold mb-2">International</h3>
+            <p class="text-gray-600 mb-4">Resources for IGCSE, IB, and other global systems</p>
+            <a href="international.html" class="text-blue-600 font-medium inline-flex items-center">
+              View Resources <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">Ready to Enhance Your Learning?</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">Join thousands of students and educators using MWALIMU ONLINE</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="exams.html" class="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full inline-block transition duration-300">
+            Browse Exams
+          </a>
+          <a href="contact.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 font-bold py-3 px-8 rounded-full inline-block transition duration-300">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">MWALIMU ONLINE</h3>
+          <p class="text-gray-400">Your global learning hub for quality educational resources.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="cbc.html" class="text-gray-400 hover:text-white transition">CBC</a></li>
+            <li><a href="8-4-4.html" class="text-gray-400 hover:text-white transition">8-4-4</a></li>
+            <li><a href="international.html" class="text-gray-400 hover:text-white transition">International</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Connect</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2024 MWALIMU ONLINE. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Include navbar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector('header[include="navbar.html"]').outerHTML = data;
+      });
+  </script>
+</body>
+</html>
