@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Learning | MWALIMU ONLINE</title>
+  <meta name="description" content="Access live classes, video lessons, and PDF resources for all curricula">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .resource-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .live-badge {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50">
+  <header include="navbar.html"></header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-20">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Online Learning Platform</h1>
+        <p class="text-xl max-w-2xl mx-auto">Live classes, video lessons, and downloadable resources for all curricula</p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Live Classes -->
+          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <div class="text-blue-600 text-4xl mb-4">
+              <i class="fas fa-video"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Live Classes</h3>
+            <p class="text-gray-600 mb-4">Interactive sessions with qualified teachers</p>
+            <a href="#live-classes" class="text-blue-600 font-medium">View Schedule</a>
+          </div>
+
+          <!-- Video Library -->
+          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <div class="text-blue-600 text-4xl mb-4">
+              <i class="fas fa-play-circle"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Video Library</h3>
+            <p class="text-gray-600 mb-4">Recorded lessons for self-paced learning</p>
+            <a href="#video-library" class="text-blue-600 font-medium">Browse Videos</a>
+          </div>
+
+          <!-- PDF Resources -->
+          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <div class="text-blue-600 text-4xl mb-4">
+              <i class="fas fa-file-pdf"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">PDF Resources</h3>
+            <p class="text-gray-600 mb-4">Downloadable notes and exercises</p>
+            <a href="#pdf-resources" class="text-blue-600 font-medium">View Resources</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Classes Section -->
+    <section id="live-classes" class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Upcoming Live Classes</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Class 1 -->
+          <div class="resource-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg" alt="Mathematics Class" class="w-full h-48 object-cover">
+              <span class="live-badge absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded-full">LIVE SOON</span>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Grade 8</span>
+                <span class="text-gray-500 text-sm">Tomorrow, 10:00 AM</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Mathematics: Algebra Basics</h3>
+              <p class="text-gray-600 mb-4">Interactive session covering fundamental algebra concepts</p>
+              <div class="flex justify-between items-center">
+                <span class="text-gray-500 text-sm"><i class="fas fa-chalkboard-teacher mr-1"></i> Mr. Kamau</span>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white text-sm py-1 px-3 rounded">Remind Me</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Class 2 -->
+          <div class="resource-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/4144228/pexels-photo-4144228.jpeg" alt="Science Class" class="w-full h-48 object-cover">
+              <span class="live-badge absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded-full">LIVE SOON</span>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Form 2</span>
+                <span class="text-gray-500 text-sm">Wed, 2:00 PM</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Science: Human Physiology</h3>
+              <p class="text-gray-600 mb-4">Exploring the digestive and circulatory systems</p>
+              <div class="flex justify-between items-center">
+                <span class="text-gray-500 text-sm"><i class="fas fa-chalkboard-teacher mr-1"></i> Dr. Wanjiku</span>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white text-sm py-1 px-3 rounded">Remind Me</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Class 3 -->
+          <div class="resource-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/5904932/pexels-photo-5904932.jpeg" alt="English Class" class="w-full h-48 object-cover">
+              <span class="live-badge absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded-full">LIVE NOW</span>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Grade 6</span>
+                <span class="text-gray-500 text-sm">Today, 4:00 PM</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">English: Creative Writing</h3>
+              <p class="text-gray-600 mb-4">Developing narrative writing skills</p>
+              <div class="flex justify-between items-center">
+                <span class="text-gray-500 text-sm"><i class="fas fa-chalkboard-teacher mr-1"></i> Mrs. Atieno</span>
+                <a href="#" class="bg-red-600 hover:bg-red-700 text-white text-sm py-1 px-3 rounded">Join Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+            View Full Schedule
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Library Section -->
+    <section id="video-library" class="py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Video Lesson Library</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Video 1 -->
+          <div class="resource-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg" alt="Mathematics Video" class="w-full h-40 object-cover">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="bg-black bg-opacity-50 rounded-full p-3">
+                  <i class="fas fa-play text-white text-xl"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mb-2 inline-block">Grade 7</span>
+              <h3 class="text-lg font-semibold mb-2">Fractions Explained</h3>
+              <div class="flex justify-between text-sm text-gray-500">
+                <span><i class="fas fa-clock mr-1"></i> 15 min</span>
+                <span><i class="fas fa-eye mr-1"></i> 1.2K views</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 2 -->
+          <div class="resource-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg" alt="Chemistry Video" class="w-full h-40 object-cover">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="bg-black bg-opacity-50 rounded-full p-3">
+                  <i class="fas fa-play text-white text-xl"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mb-2 inline-block">Form 4</span>
+              <h3 class="text-lg font-semibold mb-2">Organic Chemistry Basics</h3>
+              <div class="flex justify-between text-sm text-gray-500">
+                <span><i class="fas fa-clock mr-1"></i> 22 min</span>
+                <span><i class="fas fa-eye mr-1"></i> 856 views</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 3 -->
+          <div class="resource-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/3778602/pexels-photo-3778602.jpeg" alt="History Video" class="w-full h-40 object-cover">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="bg-black bg-opacity-50 rounded-full p-3">
+                  <i class="fas fa-play text-white text-xl"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mb-2 inline-block">Grade 5</span>
+              <h3 class="text-lg font-semibold mb-2">Kenyan History Timeline</h3>
+              <div class="flex justify-between text-sm text-gray-500">
+                <span><i class="fas fa-clock mr-1"></i> 18 min</span>
+                <span><i class="fas fa-eye mr-1"></i> 1.5K views</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 4 -->
+          <div class="resource-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg" alt="Physics Video" class="w-full h-40 object-cover">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="bg-black bg-opacity-50 rounded-full p-3">
+                  <i class="fas fa-play text-white text-xl"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mb-2 inline-block">Form 3</span>
+              <h3 class="text-lg font-semibold mb-2">Newton's Laws of Motion</h3>
+              <div class="flex justify-between text-sm text-gray-500">
+                <span><i class="fas fa-clock mr-1"></i> 25 min</span>
+                <span><i class="fas fa-eye mr-1"></i> 1.1K views</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+            Browse All Videos
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PDF Resources Section -->
+    <section id="pdf-resources" class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">PDF Resources</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- PDF 1 -->
+          <div class="resource-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+            <div class="flex items-start mb-4">
+              <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <i class="fas fa-file-pdf text-blue-600 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">CBC Grade 4 Notes</h3>
+                <p class="text-gray-600">Comprehensive notes for all subjects</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <a href="#" class="text-blue-600 font-medium">Download</a>
+              <span class="text-gray-500 text-sm">8.4 MB</span>
+            </div>
+          </div>
+
+          <!-- PDF 2 -->
+          <div class="resource-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+            <div class="flex items-start mb-4">
+              <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <i class="fas fa-file-pdf text-blue-600 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">KCSE Revision Booklet</h3>
+                <p class="text-gray-600">Subject-specific revision materials</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <a href="#" class="text-blue-600 font-medium">Download</a>
+              <span class="text-gray-500 text-sm">12.7 MB</span>
+            </div>
+          </div>
+
+          <!-- PDF 3 -->
+          <div class="resource-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+            <div class="flex items-start mb-4">
+              <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <i class="fas fa-file-pdf text-blue-600 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">IGCSE Past Papers</h3>
+                <p class="text-gray-600">2015-2023 exam papers with mark schemes</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <a href="#" class="text-blue-600 font-medium">Download</a>
+              <span class="text-gray-500 text-sm">24.3 MB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+            View All Resources
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">Ready to Start Learning?</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">Join thousands of students improving their education with MWALIMU ONLINE</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="contact.html" class="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full inline-block transition duration-300">
+            Get Started
+          </a>
+          <a href="#" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 font-bold py-3 px-8 rounded-full inline-block transition duration-300">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">MWALIMU ONLINE</h3>
+          <p class="text-gray-400">Your complete online learning platform.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="online-learning.html" class="text-gray-400 hover:text-white transition">Online Learning</a></li>
+            <li><a href="exams.html" class="text-gray-400 hover:text-white transition">Exam Resources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="#live-classes" class="text-gray-400 hover:text-white transition">Live Classes</a></li>
+            <li><a href="#video-library" class="text-gray-400 hover:text-white transition">Video Library</a></li>
+            <li><a href="#pdf-resources" class="text-gray-400 hover:text-white transition">PDF Resources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2">
+            <li class="text-gray-400"><i class="fas fa-envelope mr-2"></i> learn@mwalimuonline.com</li>
+            <li class="text-gray-400"><i class="fas fa-phone mr-2"></i> +254 740 452793</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2024 MWALIMU ONLINE. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Include navbar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector('header[include="navbar.html"]').outerHTML = data;
+      });
+
+    // Live class countdown functionality would go here
+    // Video player integration would go here
+  </script>
+</body>
+</html>
