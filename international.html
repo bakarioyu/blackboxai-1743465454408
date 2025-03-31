@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>International Curriculum Resources | MWALIMU ONLINE</title>
+  <meta name="description" content="Comprehensive learning materials for international curricula including IGCSE, IB, and American systems.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .curriculum-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .tab-active {
+      border-bottom: 3px solid #3b82f6;
+      color: #3b82f6;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50">
+  <header include="navbar.html"></header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-700 to-blue-900 text-white py-20">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">International Curriculum Resources</h1>
+        <p class="text-xl max-w-2xl mx-auto">Global education materials for students and educators worldwide</p>
+      </div>
+    </section>
+
+  <!-- Curriculum Navigation -->
+  <section class="py-8 bg-white shadow-sm">
+    <div class="container mx-auto px-4">
+      <div class="flex overflow-x-auto pb-2 space-x-4">
+        <button class="tab-active px-4 py-2 font-medium whitespace-nowrap" data-curriculum="igcse">IGCSE</button>
+        <button class="px-4 py-2 font-medium whitespace-nowrap" data-curriculum="ib">IB Diploma</button>
+        <button class="px-4 py-2 font-medium whitespace-nowrap" data-curriculum="ap">AP Program</button>
+        <button class="px-4 py-2 font-medium whitespace-nowrap" data-curriculum="american">American System</button>
+        <button class="px-4 py-2 font-medium whitespace-nowrap" data-curriculum="british">British System</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- IGCSE Content (Default visible) -->
+  <section class="py-16" id="igcse-content">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row gap-8">
+        <!-- Subjects Column -->
+        <div class="md:w-1/4">
+          <h3 class="text-xl font-semibold mb-4 border-b pb-2">IGCSE Subjects</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-blue-600 hover:underline">Mathematics</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">English Language</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Biology</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Chemistry</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Physics</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Business Studies</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">History</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Geography</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">ICT</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources Column -->
+        <div class="md:w-3/4">
+          <h2 class="text-3xl font-bold mb-8">Cambridge IGCSE Resources</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <!-- Resource Card 1 -->
+            <div class="curriculum-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+              <div class="flex items-start mb-4">
+                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                  <i class="fas fa-file-alt text-blue-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">IGCSE Past Papers</h3>
+                  <p class="text-gray-600">2015-2023 exam papers with mark schemes</p>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <a href="#" class="text-blue-600 font-medium">Download</a>
+                <span class="text-gray-500 text-sm">24.7 MB</span>
+              </div>
+            </div>
+
+            <!-- Resource Card 2 -->
+            <div class="curriculum-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+              <div class="flex items-start mb-4">
+                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                  <i class="fas fa-book text-blue-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">Revision Guides</h3>
+                  <p class="text-gray-600">Subject-specific study materials</p>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <a href="#" class="text-blue-600 font-medium">Download</a>
+                <span class="text-gray-500 text-sm">18.3 MB</span>
+              </div>
+            </div>
+
+            <!-- Resource Card 3 -->
+            <div class="curriculum-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+              <div class="flex items-start mb-4">
+                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                  <i class="fas fa-lightbulb text-blue-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">Study Tips</h3>
+                  <p class="text-gray-600">Strategies for exam success</p>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <a href="#" class="text-blue-600 font-medium">Download</a>
+                <span class="text-gray-500 text-sm">5.2 MB</span>
+              </div>
+            </div>
+
+            <!-- Resource Card 4 -->
+            <div class="curriculum-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+              <div class="flex items-start mb-4">
+                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                  <i class="fas fa-project-diagram text-blue-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">Practical Guides</h3>
+                  <p class="text-gray-600">Science practical instructions</p>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <a href="#" class="text-blue-600 font-medium">Download</a>
+                <span class="text-gray-500 text-sm">9.8 MB</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-4">About Cambridge IGCSE</h3>
+            <p class="text-gray-700 mb-4">
+              The International General Certificate of Secondary Education (IGCSE) is the world's most popular international qualification for 14 to 16 year olds. It is recognized by leading universities and employers worldwide.
+            </p>
+            <a href="#" class="text-blue-600 font-medium inline-flex items-center">
+              Learn more about IGCSE <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IB Content (Hidden by default) -->
+  <section class="py-16 bg-gray-100 hidden" id="ib-content">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row gap-8">
+        <!-- Subjects Column -->
+        <div class="md:w-1/4">
+          <h3 class="text-xl font-semibold mb-4 border-b pb-2">IB Diploma Subjects</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-blue-600 hover:underline">Group 1: Language & Literature</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Group 2: Language Acquisition</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Group 3: Individuals & Societies</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Group 4: Sciences</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Group 5: Mathematics</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Group 6: The Arts</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">TOK</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">EE</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">CAS</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources Column -->
+        <div class="md:w-3/4">
+          <h2 class="text-3xl font-bold mb-8">International Baccalaureate Resources</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <!-- Resource Card 1 -->
+            <div class="curriculum-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+              <div class="flex items-start mb-4">
+                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                  <i class="fas fa-file-alt text-blue-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">IB Past Papers</h3>
+                  <p class="text-gray-600">2015-2023 exam papers with mark schemes</p>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <a href="#" class="text-blue-600 font-medium">Download</a>
+                <span class="text-gray-500 text-sm">32.1 MB</span>
+              </div>
+            </div>
+
+            <!-- Resource Card 2 -->
+            <div class="curriculum-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+              <div class="flex items-start mb-4">
+                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                  <i class="fas fa-book text-blue-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">Study Guides</h3>
+                  <p class="text-gray-600">Comprehensive subject guides</p>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <a href="#" class="text-blue-600 font-medium">Download</a>
+                <span class="text-gray-500 text-sm">28.5 MB</span>
+              </div>
+            </div>
+
+            <!-- Resource Card 3 -->
+            <div class="curriculum-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+              <div class="flex items-start mb-4">
+                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                  <i class="fas fa-lightbulb text-blue-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">EE & TOK Resources</h3>
+                  <p class="text-gray-600">Extended Essay and Theory of Knowledge</p>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <a href="#" class="text-blue-600 font-medium">Download</a>
+                <span class="text-gray-500 text-sm">12.7 MB</span>
+              </div>
+            </div>
+
+            <!-- Resource Card 4 -->
+            <div class="curriculum-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+              <div class="flex items-start mb-4">
+                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                  <i class="fas fa-project-diagram text-blue-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">IA Samples</h3>
+                  <p class="text-gray-600">Internal Assessment examples</p>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <a href="#" class="text-blue-600 font-medium">Download</a>
+                <span class="text-gray-500 text-sm">15.4 MB</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-4">About IB Diploma</h3>
+            <p class="text-gray-700 mb-4">
+              The International Baccalaureate Diploma Programme is a two-year educational programme primarily aimed at students aged 16-19. The program provides an internationally accepted qualification for entry into higher education.
+            </p>
+            <a href="#" class="text-blue-600 font-medium inline-flex items-center">
+              Learn more about IB <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-blue-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Looking for Other International Curricula?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">We're constantly expanding our resources to cover more global education systems</p>
+      <a href="contact.html" class="inline-block bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition duration-300">
+        Request Resources
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-gray-800 text-white py-12">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-xl font-bold mb-4">MWALIMU ONLINE</h3>
+        <p class="text-gray-400">Your gateway to global education resources.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+          <li><a href="cbc.html" class="text-gray-400 hover:text-white transition">CBC Resources</a></li>
+          <li><a href="8-4-4.html" class="text-gray-400 hover:text-white transition">8-4-4 Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">International</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-white transition">IGCSE</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition">IB Diploma</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition">AP Program</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Contact</h4>
+        <ul class="space-y-2">
+          <li class="text-gray-400"><i class="fas fa-envelope mr-2"></i> info@mwalimuonline.com</li>
+            <li class="text-gray-400"><i class="fas fa-phone mr-2"></i> +254 740 452793</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+      <p>&copy; 2024 MWALIMU ONLINE. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Include navbar
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.querySelector('header[include="navbar.html"]').outerHTML = data;
+    });
+
+  // Tab functionality
+  const tabs = document.querySelectorAll('[data-curriculum]');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Update active tab styling
+      tabs.forEach(t => t.classList.remove('tab-active'));
+      tab.classList.add('tab-active');
+      
+      // Show/hide content sections
+      const allContents = document.querySelectorAll('[id$="-content"]');
+      allContents.forEach(content => content.classList.add('hidden'));
+      
+      const contentId = `${tab.dataset.curriculum}-content`;
+      document.getElementById(contentId).classList.remove('hidden');
+    });
+  });
+</script>
+</body>
+</html>
